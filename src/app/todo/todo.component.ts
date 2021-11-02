@@ -39,13 +39,13 @@ export class TodoComponent {
      localStorage.setItem("todos", JSON.stringify(this.todos));
    }
 
-   onToggle( todo: Todo){
+  toggleTodo( todo:Todo){
     console.log(todo);
-    const indx= this.todos.indexOf(todo);
-      //toggle state on click of checkbox
+      const indx= this.todos.indexOf(todo);
+       //toggle state on click of checkbox
       this.todos[indx].active= ! this.todos[indx].active;
       localStorage.setItem("todos", JSON.stringify(this.todos));
-
   }
+
 
 }
