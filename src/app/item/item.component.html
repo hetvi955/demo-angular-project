@@ -1,0 +1,17 @@
+<div class="container m-4 p-5">
+    <div>
+        <input class="form-check-input" type="checkbox" id="checkboxNoLabel" value="" aria-label="..." (click)="onCheck(todo)">
+    </div>
+    <h4 [ngClass]="{'strike' : !todo.active}">{{todo.title}}</h4>
+    
+    <h5>{{todo.desc}}</h5>
+    <button class="btn btn-danger"
+    (click)="onClick(todo)"
+    style="float: right;">
+        remove
+    </button>
+
+
+</div>
+<hr/>
+

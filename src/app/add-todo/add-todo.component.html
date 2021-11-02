@@ -1,0 +1,17 @@
+
+<div class= "container mb-4">
+    <h3>Add new todo</h3>
+    <form (ngSubmit)="onAdd()">
+        <div class="form-group">
+          <label for="title">Whats your todo name?</label>
+          <input type="text" class="form-control" id="title" [(ngModel)]="title" name="title">
+        </div>
+        <div class="form-group">
+          <label for="desc">Describe your todo</label>
+          <input type="text" class="form-control" id="desc" placeholder="Call Jeffery at 6" [(ngModel)]="desc" name="desc">
+        </div>
+       
+        <button type="submit" class="btn btn-primary mt-3">Add</button>
+      </form>
+</div>
+

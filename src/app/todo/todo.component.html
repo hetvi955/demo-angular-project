@@ -1,0 +1,14 @@
+<div class="container">
+    <h2 class="text-center m-5" >
+        todo list
+    </h2>
+    <app-add-todo  (todoAdd)="addTodo($event)" (todoCheck)="onToggle($event)"></app-add-todo>
+
+    <div *ngIf="this.todos.length===0; else elseBlock">You dont have any pending to-do. yey!</div>
+    <ng-template #elseBlock>
+        <div *ngFor="let todo of todos">
+            <app-item [todo]="todo" (todoRemove)="remove_todo($event)"></app-item>
+        </div>
+    </ng-template>
+   
+</div>
